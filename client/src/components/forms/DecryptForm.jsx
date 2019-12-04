@@ -15,7 +15,7 @@ const styles = {
     }
 }
 
-function LoginForm(props) {
+function DecryptForm(props) {
     const [pwd, setPwd] = useState("");
     const [feedback, setFeedback] = useState("");
 
@@ -85,4 +85,4 @@ function LoginForm(props) {
     )
 }
 
-export default withStyles(styles)(LoginForm);
+export default withStyles(styles)(DecryptForm);
