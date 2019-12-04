@@ -2,6 +2,8 @@ import React, { Component, useEffect, useState } from 'react';
 import { Switch, Route } from "react-router-dom";
 import JSEncrypt from "jsencrypt";
 import CryptoJS from "crypto-js";
+import axios from "axios";
+import LoginForm from "./components/forms/LoginForm";
 
 class Setup extends Component {
     constructor() {
@@ -26,6 +28,9 @@ class Setup extends Component {
                     <Route path="/setup/welcome" render={props => (
                         <Welcome {...props} />
                     )} />
+                    <Route path="/setup/login" render={props => (
+                        <Login {...props} updateState={this.updateState} />
+                    )} />
                     <Route path="/setup/password" render={props => (
                         <Password {...props} updateState={this.updateState} />
                     )} />
@@ -48,6 +53,14 @@ function Welcome(props) {
             <h1>THE VAULT</h1>
             <button onClick={() => props.history.push("/setup/password")}>NEXT</button>
         </React.Fragment>
+    )
+}
+
+function Login(props) {
+    return (
+        <div>
+            <LoginForm />
+        </div>
     )
 }
 
