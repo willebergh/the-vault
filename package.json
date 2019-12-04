@@ -1,0 +1,33 @@
+{
+  "name": "the-vault",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "concurrently \"npm run server\" \"cd client && npm start\"",
+    "client": "cd client && npm start",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willebergh/the-vault.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willebergh/the-vault/issues"
+  },
+  "homepage": "https://github.com/willebergh/the-vault#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "colors": "^1.4.0",
+    "console.table": "^0.10.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.13"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0"
+  }
+}
